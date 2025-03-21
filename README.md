@@ -84,8 +84,8 @@ Day 26: Gather feedback from users and optimize performance.
 
 Day 27: Prepare final project documentation and presentation slides.
 
-Day 28: Final project presentation and submission
+Day 28: Final project presentation and submission.
 
-Conclusion
+Conclusion:
 
-Rhythm is an innovative music streaming and karaoke platform that enhances user interaction through real-time singing, social engagement, and learning opportunities. By integrating a streak-based gamification system, professional singing lessons, and interactive karaoke sessions
+Rhythm is an innovative music streaming and karaoke platform that enhances user interaction through real-time singing, social engagement, and learning opportunities. By integrating a streak-based gamification system, professional singing lessons, and interactive karaoke sessions.
