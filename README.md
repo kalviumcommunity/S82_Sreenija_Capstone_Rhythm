@@ -70,7 +70,7 @@ Day 20: Connect frontend with backend APIs and test data flow.
 
 Day 21: Conduct an initial frontend review and fix UI inconsistencies.
 
-Week 4: Features, Testing & Deployment
+Week 4: Features, Testing & Deployment.
 
 Day 22: Integrate Stripe/Razorpay for paid singing lessons.
 
