@@ -1,25 +1,56 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import cors from 'cors';
-import connectDB from './config/db.js';
+const express = require("express");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const cors = require("cors");
 
+const userRoutes = require("./routes/userRoutes");
+const songRoutes = require("./routes/songRoutes");
+const classRoutes = require("./routes/classRoutes");
+
+
+// Load environment variables
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+app.use("/api/users", userRoutes);
+app.use("/api/songs", songRoutes);
+app.use("/api/classes", classRoutes);
 
-// Connect to MongoDB
-connectDB();
+
 
 // Middleware
-app.use(cors());
 app.use(express.json());
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With", "Accept"]
+}));
 
-// Sample route
-app.get('/', (req, res) => {
-  res.send(' Rhythm Backend Running');
+// Route imports
+const authRoutes = require("./routes/auth");
+const otpRoutes = require("./routes/otpRoutes"); // ✅ ADD THIS LINE
+
+// Mount routes
+app.use("/api/auth", authRoutes);
+app.use("/otp", otpRoutes); // ✅ MOUNT OTP ROUTES
+
+// Global error handler
+app.use((err, req, res, next) => {
+  res.status(err.statusCode || 500).json({
+    success: false,
+    message: err.message || "Internal Server Error",
+  });
 });
 
-app.listen(PORT, () => {
-  console.log(` Server running at http://localhost:${PORT}`);
-});
+// Connect to MongoDB and start the server
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log("MongoDB connected");
+    app.listen(process.env.PORT, () => {
+      console.log(`Server running on http://localhost:${process.env.PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error("MongoDB connection failed", err);
+  });
