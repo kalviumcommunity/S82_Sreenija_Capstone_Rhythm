@@ -11,5 +11,5 @@ userSchema.methods.comparePassword = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
 
-// ✅ Fix OverwriteModelError by checking existing models
+
 module.exports = mongoose.models.User || mongoose.model('User', userSchema);
