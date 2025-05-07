@@ -8,7 +8,7 @@ const songRoutes = require("./routes/songRoutes");
 const classRoutes = require("./routes/classRoutes");
 
 
-// Load environment variables
+
 dotenv.config();
 
 const app = express();
