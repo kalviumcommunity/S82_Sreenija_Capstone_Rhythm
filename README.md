@@ -53,7 +53,6 @@ Day 28: Create final report and slides
 Day 29: Practice final presentation
 Day 30: Final Submission & Demo Day!
 
-
 Conclusion
 Rhythm offers a powerful combination of music, karaoke, and learning. By integrating social elements like friend streaks, real-time karaoke, and professional coaching, it delivers a fresh, engaging experience. With a strong tech stack and detailed planning, Rhythm is built to impress.
 
