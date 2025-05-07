@@ -7,24 +7,22 @@ const userRoutes = require("./routes/userRoutes");
 const songRoutes = require("./routes/songRoutes");
 const classRoutes = require("./routes/classRoutes");
 
-
-
 dotenv.config();
-
-const app = express();
-app.use("/api/users", userRoutes);
-app.use("/api/songs", songRoutes);
-app.use("/api/classes", classRoutes);
-
-
-
 // Middleware
+const app = express();
 app.use(express.json());
 app.use(cors({
   origin: "http://localhost:5173",
   credentials: true,
   allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With", "Accept"]
 }));
+
+app.use("/api/users", userRoutes);
+app.use("/api/songs", songRoutes);
+app.use("/api/classes", classRoutes);
+
+
+
 
 // Route imports
 const authRoutes = require("./routes/auth");
