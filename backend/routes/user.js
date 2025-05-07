@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// POST a new user
+// POST a new user.. \\\\\\\\\\
 router.post("/", async (req, res) => {
   const { name, email, password } = req.body;
   try {
