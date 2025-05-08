@@ -56,5 +56,5 @@ Day 30: Final Submission & Demo Day!
 Conclusion
 Rhythm offers a powerful combination of music, karaoke, and learning. By integrating social elements like friend streaks, real-time karaoke, and professional coaching, it delivers a fresh, engaging experience. With a strong tech stack and detailed planning, Rhythm is built to impress.
 
-deployed link
-https://s82-sreenija-capstone-rhythm-11.onrender.com/
+Backend deployed link
+https://s82-sreenija-capstone-rhythm-12.onrender.com/
