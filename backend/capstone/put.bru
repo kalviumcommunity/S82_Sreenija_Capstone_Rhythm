@@ -1,0 +1,19 @@
+meta {
+  name: put
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:5000/api/users/681c703d33d871690fd70293
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name":"akhii",
+    "email":"akhiii@gmail.com",
+    "password":"akhii"
+  }
+}
